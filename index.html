@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-f1E9fOMBl4xyosWofL1MAwpZlS2BmTbDKq+KjLd3Gdaxxhcs0ZtApBs1M5ESeaIl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-f1E9fOMBl4xyosWofL1MAwpZlS2BmTbDKq+KjLd3Gdaxxhcs0ZtApBs1M5ESeaIl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style type="text/css">
+        body {
+            background-image: url(ltr1.jpeg);
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #ffffffe4;
+        }
+
+        header {
+            background-color: #0c0c0c;
+            color: rgb(208, 234, 58);
+            text-align: center;
+            padding: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 5em;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff5722;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff5722, 0 0 40px #ff5722;
+            }
+        }
+
+        .carousel-inner img {
+            width: 30%;
+            height: 50;
+        }
+
+        .btn-group-lg .btn {
+            font-size: 1.5em;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            max-width: 20%;
+            height: 15;
+            border: 5px solid #361cb7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ebeaea;
+        }
+
+        .price-button {
+            background-color: #008CBA;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .body {
+            background-image: url(ltr1.jpeg);
+        }
+
+        /* Styling for Search and Cart buttons */
+        .btn-search,
+        .btn-cart {
+            background-color: #f8d347;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.1s ease;
+        }
+
+        .btn-search:hover,
+        .btn-cart:hover {
+            background-color: #0f0f0e;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header .logo span {
+            color: #FF5733; /* Adjust color as needed */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            display: none;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            color: #f9f5f5;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        section h4 {
+            color: #FF5733; /* Adjust color as needed */
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            color: #f9f7f7;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            margin-top: 40px;
+        }
+
+        .button-group a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF5733; /* Adjust color as needed */
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group a:hover {
+            background-color: #FF8C66; /* Adjust color as needed */
+        }
+    </style>
+</head>
+<body>
+        <nav>
+            <button type="button" class="btn btn-outline-warning" onclick="showPage('home')"><img src ="icn2.jpeg" style="width:30px" class="rounded-pill"></button>
+            <button type="button" class="btn btn-outline-warning"onclick="showPage('about')">About</button>
+            <button type="button" class="btn btn-outline-warning"onclick="showPage('contact')"><img src ="icn3.jpeg" style="width:30px" class="rounded-pill"></button>
+            <button type="button" class="btn btn-outline-warning"onclick="showPage('Visi & Misi')">Visi & Misi</button>
+            
+        </nav>
+    <section id="home" class="active"><img src="gbr1.jpeg" alt="Logo" style="width:80px;" class="rounded-pill">
+        <div class="content">
+            <h2>Hi, Selamat datang <span>di Garamond</span></h2>
+            <h4>Ubahlah fashionmu bersama brand kami</h4>
+            <p>Garamond, brand fashion yang sangat kekinian di tahun 2023, menawarkan gaya yang inovatif dan trendy untuk para pecinta mode. Dengan desain yang modern dan warna-warna yang penuh energi, Garamond menciptakan pakaian yang mencerminkan gaya hidup urban yang dinamis. Koleksi terbarunya menggabungkan sentuhan futuristik dengan elemen klasik, memberikan kesan yang segar namun tetap timeless. Garamon tidak hanya mengeksplorasi tren fashion, tetapi juga menekankan pada kenyamanan dan keberlanjutan.</p>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <p>"Garamond" adalah merek fashion yang menonjolkan gaya yang inovatif dan eksperimental. Dengan fokus pada kualitas bahan dan desain yang unik, Garamond menciptakan pakaian yang memadukan keberanian artistik dengan kenyamanan fungsional. Merek ini berkomitmen untuk menghadirkan koleksi yang tidak hanya memenuhi tren mode saat ini tetapi juga menciptakan tren baru. Garamond, sebuah pilihan bagi mereka yang menghargai ekspresi diri melalui gaya yang tak terlupakan.</p><!-- Content for About page -->
+            <!-- Add your about page content here -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <p>Admind Brand :
+                 08220077879
+            </p><!-- Content for Contact page -->
+            <!-- Add your contact page content here -->
+        </div>
+    </section>
+
+    <section id="Visi & Misi">
+        <div class="content">
+            <p>Visi:
+                Menciptakan tren fashion yang inovatif dan ekspresif untuk anak-anak Generasi Z, memberikan pengalaman berbelanja yang berkelanjutan dan memberdayakan kreativitas mereka.
+                
+                Misi:
+                1. Inovasi Gaya:
+                   Menghadirkan desain unik dan kekinian untuk memberikan identitas fashion yang kuat kepada anak-anak Generasi Z.
+                
+                2. Berkesan dan Berkelanjutan:
+                   Menekankan penggunaan bahan ramah lingkungan dalam setiap produk untuk memastikan dampak positif pada lingkungan dan memberikan kesadaran lingkungan kepada konsumen.
+                
+                3. Pemberdayaan Kreativitas:
+                   Mendorong anak-anak untuk mengekspresikan diri melalui fashion, mengadopsi prinsip "Berani Berbeda" untuk memotivasi mereka menjadi diri mereka yang unik.
+                   GARAMOND bukan sekadar brand fashion; ini adalah gerakan untuk membentuk identitas positif dan memberikan kontribusi pada masa depan yang berkelanjutan untuk Generasi Z.
+            </p><!-- Content for Contact page -->
+            <!-- Add your contact page content here -->
+        </div>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+    </style>
+<header><h1 style="border: 2px solid rgba(245, 185, 6, 0.97);"></h1>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="gbr1.jpeg" alt="Logo" style="width:60px;" class="rounded-pill">
+            </a>
+          </div>
+        </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="header">
+            <button type="button" class="btn btn-outline-warning" onclick="openCart()"><i class="fas fa-shopping-cart"></i><img src ="icn1.jpeg" style="width:30px" class="rounded-pill"></button>         
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-warning" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav></header>
+</div><h1 style="border: 5px solid rgb(248, 247, 243);"></h1>
+
+    <title>Garamond</title>
+</head>
+
+<body>
+    <header>
+        <h1>Garamond</h1>
+       
+        </div>
+            </div>
+                </header><h1 style="border: 2px solid rgb(247, 183, 5);"></h1>
+                
+    
+        <!-- Add buttons for search, about, and cart -->
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="style1.jpeg" alt="Los Angeles" width="400" height="610">
+                <div class="carousel-caption">
+                    <h3>New York</h3>
+                    <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="style2.jpeg" alt="Chicago" width="400" height="610">
+                <div class="carousel-caption">
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="style3.jpeg" alt="New York" width="400" height="610">
+                <div class="carousel-caption">
+                    <h3>Arab Style</h3>
+                    <p>We love the Big Apple!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="style4.jpeg" alt="New York" width="400" height="600">
+                <div class="carousel-caption">
+                    <h4>Korean Style</h4>
+                    <p>Hot!</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add navigation controls -->
+        <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span> 
+            
+        </a>
+        <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <h1 style="border: 2px solid rgb(247, 183, 5);"></h1>
+    <div class="container">
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-info" onclick="showImages('Dress')">Dress</button>
+            <button type="button" class="btn btn-primary" onclick="showImages('Pants')">Pants</button>
+            <button type="button" class="btn btn-info" onclick="showImages('Aksesoris')">Aksesoris</button>
+            <button type="button" class="btn btn-primary" onclick="showImages('Shoes')">Shoes</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="image-container" id="imageContainer"></div>
+    </div>
+
+    <script>
+        function showImages(category) {
+            var imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = ''; // Clear previous content
+
+            var images = [];
+            var prices = [];
+
+            // Replace the arrays with your actual images and prices for each category
+            if (category === 'Dress') {
+                images = ['ds1.jpeg', 'ds2.jpeg', 'ds3.jpeg', 'ds4.jpeg', 'ds5.jpeg'];
+                prices = ['Rp.100.000', 'Rp.200.000', 'Rp.300.000', 'Rp.100.000', 'Rp.300.000'];
+            } else if (category === 'Pants') {
+                images = ['ps1.jpeg', 'ps2.jpeg', 'ps3.jpeg', 'ps4.jpeg', 'ps5.jpeg'];
+                prices = ['Rp.100.000', 'Rp.200.000', 'Rp.300.000', 'Rp.100.000', 'Rp.400.000'];
+            } else if (category === 'Aksesoris') {
+                images = ['ak1.jpeg', 'ak2.jpeg', 'ak3.jpeg', 'ak4.jpeg', 'ak5.jpeg'];
+                prices = ['Rp.30.000', 'Rp.100.000', 'Rp.400.000', 'Rp.100.000', 'Rp.10.000'];
+            } else if (category === 'Shoes') {
+                images = ['sh1.jpeg', 'sh2.jpeg', 'sh3.jpeg', 'sh4.jpeg', 'sh5.jpeg'];
+                prices = ['Rp.250.000', 'Rp.200.000', 'Rp.300.000', 'Rp.400.000', 'Rp.350.000'];
+            }
+        
+            for (var i = 0; i < images.length; i++) {
+                var productContainer = document.createElement('div');
+                productContainer.className = 'product-container';
+
+                var img = document.createElement('img');
+                img.src = images[i];
+                img.alt = category + ' Image';
+                img.className = 'product-image';
+
+                var priceButton = document.createElement('button');
+                priceButton.className = 'price-button';
+                priceButton.innerText = prices[i];
+
+                productContainer.appendChild(img);
+                productContainer.appendChild(priceButton);
+                imageContainer.appendChild(productContainer);
+            }
+        }
+        
+        // Add functions for opening search, about, and cart
+        var searchUrl = "search.html";
+        function openSearch() {
+            // Implement your search functionality here
+            alert("Membangun Brand Yang Berkualitas dan Modern Serta menerapkan Fashion Yang ramah di kantong dan.");
+        }
+
+        function openAbout() {
+            // Implement your about functionality here
+            alert("Garamon, brand fashion yang sangat kekinian di tahun 2023, menawarkan gaya yang inovatif dan trendy untuk para pecinta mode. Dengan desain yang modern dan warna-warna yang penuh energi, Garamon menciptakan pakaian yang mencerminkan gaya hidup urban yang dinamis. Koleksi terbarunya menggabungkan sentuhan futuristik dengan elemen klasik, memberikan kesan yang segar namun tetap timeless. Garamon tidak hanya mengeksplorasi tren fashion, tetapi juga menekankan pada kenyamanan dan keberlanjutan, menjadikan brand ini pilihan utama bagi mereka yang mencari gaya yang sejalan dengan nilai-nilai masa kini..");
+        }
+
+        function openCart() {
+            // Implement your cart functionality here
+            alert("Dress, Pants, Aksesoris, Shoes.");
+        }
+        
+    </script>
+</body>
+
+</html>

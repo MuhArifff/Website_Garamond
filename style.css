@@ -1,0 +1,94 @@
+@import url('https://your-github-username.github.io/your-repository-name');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #070707;
+    margin: 0; /* Tambahkan properti margin: 0; untuk menghilangkan margin default pada body */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #070707; /* Tambahkan warna background pada header */
+}
+
+.logo {
+    background: rgb(247, 161, 1);
+    border-radius: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 2px solid orange;
+    font-size: 2em;
+    color: #100f0f;
+    cursor: default;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #0b0a0a;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: rgb(247, 170, 3);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(ltr4.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.content {
+    max-width: 500px;
+    color: #0b0b0a;
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.content h4 {
+    font-size: 2em;
+}
+
+.content p {
+    padding: 10px 0 40px 0;
+}
+
+.grup-tombol a {
+    text-decoration: none;
+    padding: 10px 40px;
+    background: orange;
+    border: 2px solid orange;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-block; /* Tambahkan display: inline-block; agar padding berlaku dengan baik */
+}
+
+.grup-tombol a:hover {
+    color: orange;
+    background: transparent;
+}
